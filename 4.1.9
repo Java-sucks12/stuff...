@@ -1,0 +1,38 @@
+
+import java.util.Scanner;
+
+public class MaxMin
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        int min, max, num;
+       
+        System.out.println("Enter a number (-1 to quit): ");
+        num = input.nextInt();
+       
+        max = num;
+        min = num;
+       
+        while(num != -1)
+        {
+            if(num > max)
+            {
+                max = num;
+            }
+           
+            if(num < min)
+            {
+                min = num;
+            }
+           
+            System.out.println("Smallest # so far: " + min);
+            System.out.println("Largest # so far: " + max);
+           
+            System.out.println("Enter a number (-1 to quit): ");
+            num = input.nextInt();
+           
+        }
+       
+    }
+}
